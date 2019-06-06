@@ -62,7 +62,8 @@ fn translate(input: String)  {
             None => (),
             Some(others) => {
                 for o in others.into_iter() {
-                    println!("{k} => {v} ", k = o["key"].as_string(), v = o["value"]);
+                    println!("{k} => {v} ",
+                             k = o["key"].as_str().unwrap(), v = o["value"]);
                 }
             }
 
